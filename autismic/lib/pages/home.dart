@@ -168,7 +168,7 @@ class HomePage extends StatelessWidget {
               decoration:
                   BoxDecoration(color: Colors.white, shape: BoxShape.circle),
               child: Padding(
-                padding: const EdgeInsets.all(8),
+                padding: const EdgeInsets.all(0),
                 //child: SvgPicture.asset(assetName),
               ),
             ),
@@ -182,7 +182,7 @@ class HomePage extends StatelessWidget {
           child: Text(
         categories[index].name,
         style: TextStyle(
-            fontFamily: 'Alegreya', fontSize: 20, color: Color(0xff371B34)),
+            fontFamily: 'Alegreya', fontSize: 0.05 * deviceHeight, color: Color(0xff371B34)),
       ))
     ]);
   }
