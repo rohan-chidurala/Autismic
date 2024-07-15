@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'Alegreya'),
-      home: HomePage()
+      
+      home: DefaultTabController( length: 3, child: HomePage())
     );
   }
 }
