@@ -7,8 +7,10 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatelessWidget {
+  
   int selectedIndex = 0;
   HomePage({super.key});
+  
 
   List<FeelingCheck> categories = [];
   List<Tool> tools = [];
@@ -26,6 +28,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double deviceHeight = MediaQuery.of(context).size.height;
+    double deviceWidth =  MediaQuery.of(context).size.width;
     getCategories();
     getTools();
     var appBar = AppBar (
@@ -54,7 +58,7 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 25,
+              height: 0.015*deviceHeight,
               width: double.infinity,
             ),
             Padding(
@@ -68,10 +72,10 @@ class HomePage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 40,
+              height: 0.015*deviceHeight,
             ),
             Container(
-              height: 200,
+              height: 0.17*deviceHeight,
               //color: Color.fromARGB(255, 135, 95, 95),
               child: ListView.separated(
                 itemCount: categories.length,
