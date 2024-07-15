@@ -74,8 +74,8 @@ class HomePage extends StatelessWidget {
             height: 0.015 * deviceHeight,
           ),
           Container(
-            height: 0.17 * deviceHeight,
-            //color: Color.fromARGB(255, 135, 95, 95),
+            height: 0.2 * deviceHeight,
+            color: Color.fromARGB(255, 135, 95, 95),
             child: ListView.separated(
               itemCount: categories.length,
               padding: EdgeInsets.only(left: 20, right: 20),
@@ -108,7 +108,7 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                height: 0.33 * deviceHeight,
+                height: 0.4 * deviceHeight,
                 width: double.infinity,
                 child: ListView.separated(
                   padding: EdgeInsets.only(left: 20, right: 20),
@@ -150,12 +150,13 @@ class HomePage extends StatelessWidget {
   }
 
   Widget? currentFeeling(context, index) {
-    final double deviceWidth = MediaQuery.of(context).size.width;
-    final double deviceHeight = MediaQuery.of(context).size.width;
+    final double contextWidth = MediaQuery.of(context).size.width;
+    final double contextHeight = MediaQuery.of(context).size.height;
     return Column(children: [
+      
       Container(
-        width: 0.25 * deviceWidth,
-        height: 0.25 * deviceWidth,
+        width: 0.12*contextHeight,
+        height: 0.12 * contextHeight,
         decoration: BoxDecoration(
             color: categories[index].boxColor,
             borderRadius: BorderRadius.circular(25)),
@@ -163,8 +164,8 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              width: 0.12 * deviceWidth,
-              height: 0.12 * deviceWidth,
+              width: 0.06 * contextHeight,
+              height: 0.06 * contextHeight,
               decoration:
                   BoxDecoration(color: Colors.white, shape: BoxShape.circle),
               child: Padding(
@@ -179,10 +180,11 @@ class HomePage extends StatelessWidget {
         height: 0,
       ),
       Container(
+        
           child: Text(
         categories[index].name,
         style: TextStyle(
-            fontFamily: 'Alegreya', fontSize: 0.05 * deviceHeight, color: Color(0xff371B34)),
+            fontFamily: 'Alegreya', fontSize: 20, color: Color(0xff371B34)),
       ))
     ]);
   }
