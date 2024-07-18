@@ -5,10 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_generative_ai/src/model.dart';
 
 class HomePage extends StatelessWidget {
   int selectedIndex = 0;
-  HomePage({super.key});
+  HomePage({super.key, required GenerativeModel geminiVisionProModel, required GenerativeModel geminiProModel});
 
   List<FeelingCheck> categories = [];
   List<Tool> tools = [];
